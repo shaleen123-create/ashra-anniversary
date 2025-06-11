@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 2-Months, Ashra ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to top, #ffafbd, #ffc3a0);
+      color: #333;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #b83280;
+    }
+    .heart {
+      font-size: 4em;
+      animation: pulse 1.5s infinite;
+      color: red;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .clue {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #444;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #b83280;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .final {
+      display: none;
+      margin-top: 30px;
+      font-size: 1.5em;
+      color: #b83280;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy 2-Month Anniversary, Ashra Shrestha! 💕</h1>
+  <div class="heart">❤️</div>
+  <p>You're the sunshine to my sunset, and these 60 days have been the best.</p>
+
+  <button onclick="showClue('clue1')">Start Your Scavenger Hunt 🔍</button>
+
+  <div id="clue1" class="clue">
+    Clue 1: Look under the heart of the page... <br/>
+    <button onclick="showClue('clue2')">Found it! Show next clue</button>
+  </div>
+
+  <div id="clue2" class="clue">
+    Clue 2: What’s your name? It’s hidden in love. <br/>
+    (Hint: Hover over the heart!) <br/>
+    <button onclick="showClue('clue3')">I saw it! Next clue!</button>
+  </div>
+
+  <div id="clue3" class="clue">
+    Clue 3: You’ve reached the final treasure — a note from me to you: ❤️<br/>
+    <button onclick="showFinal()">Reveal Final Message</button>
+  </div>
+
+  <div class="final" id="final">
+    Ashra, these two months have been magic. Thank you for being in my life.
+    I can't wait to create more memories with you 💖.
+  </div>
+
+  <script>
+    function showClue(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function showFinal() {
+      document.getElementById('final').style.display = 'block';
+    }
+    // Easter egg name on hover
+    document.querySelector('.heart').title = "Ashra Shrestha ❤️";
+  </script>
+</body>
+</html>
